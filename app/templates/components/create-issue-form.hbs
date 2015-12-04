@@ -1,0 +1,6 @@
+<form {{action 'createIssue' on='submit'}}>
+  <p>{{input type='text' value=newIssue.title id='issueTitle'}}</p>
+  <p>{{textarea value=newIssue.description id='issueDescription'}}</p>
+  <p><button type="submit">Create Issue</button></p>
+</form>
+

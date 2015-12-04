@@ -1,0 +1,12 @@
+<h1><strong>{{ model.name }}</strong> (total {{ model.publicRepos }})</h1>
+<ul>
+  {{#each model.repos as |repo|}}
+    <li>
+    {{repo.fullName}} ({{repo.language}}, {{repo.stargazersCount}} stars)
+    <button {{action 'star' repo}}>star</button>
+    </li>
+  {{/each}}
+</ul>
+
+<h2>Create issue</h2>
+{{create-issue-form onSubmit='createIssue'}}
